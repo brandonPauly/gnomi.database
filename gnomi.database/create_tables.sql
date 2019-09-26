@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[human]
 CREATE TABLE [dbo].[verificationKey]
 (
 	[humanId] [bigint] NOT NULL UNIQUE,
-	[verificationGuid] [nvarchar](60) NOT NULL,
-	CONSTRAINT [PK_verificationKey] PRIMARY KEY ([humanId], [verificationGuid]),
+	[verificationCode] [nvarchar](60) NOT NULL,
+	CONSTRAINT [PK_verificationKey] PRIMARY KEY ([humanId], [verificationCode]),
 	CONSTRAINT [FK_humanId] FOREIGN KEY ([humanId]) REFERENCES [dbo].[human] ON UPDATE CASCADE
 );
