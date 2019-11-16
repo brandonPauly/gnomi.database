@@ -28,7 +28,7 @@ CREATE TABLE [dbo].[human]
 	CONSTRAINT [FK_genderId] FOREIGN KEY ([genderId]) REFERENCES [dbo].[gender] ON UPDATE CASCADE
 );
 
-CREATE TABLE [dbo].[verificationKey]
+CREATE TABLE [dbo].[verification]
 (
 	[humanId] [bigint] NOT NULL UNIQUE,
 	[verificationCode] [nvarchar](96) NOT NULL,
